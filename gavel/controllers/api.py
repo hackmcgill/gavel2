@@ -12,7 +12,7 @@ def item_dump():
         str(item.mu),
         str(item.sigma_sq),
         item.name,
-        item.location,
+        item.discord_channel,
         item.description,
         item.active
     ] for item in items]

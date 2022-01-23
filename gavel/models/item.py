@@ -16,7 +16,7 @@ view_table = db.Table('view',
 class Item(BaseModel):
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     name = db.Column(db.Text, nullable=False)
-    location = db.Column(db.Text, nullable=False)
+    discord_channel = db.Column(db.Text, nullable=False)
     description = db.Column(db.Text, nullable=False)
 
     # Optional Video Reference (implicitly "required" in "virtual mode")
@@ -39,7 +39,7 @@ class Item(BaseModel):
 
     _default_fields = [
         "name",
-        "location",
+        "discord_channel",
         "description",
         "video_reference",
         "submission_reference",
@@ -55,9 +55,9 @@ class Item(BaseModel):
 
     relations_keys = ("viewed", "flags")
 
-    def __init__(self, name, location, description, tagline="N/A", video_reference="N/A", submission_reference="N/A", submission_website="N/A"):
+    def __init__(self, name, discord_channel, description, tagline="N/A", video_reference="N/A", submission_reference="N/A", submission_website="N/A"):
         self.name = name
-        self.location = location
+        self.discord_channel = discord_channel
         self.description = description
         self.tagline = tagline
         self.video_reference = video_reference

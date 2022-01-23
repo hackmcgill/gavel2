@@ -68,7 +68,7 @@ def injectAnnotator(target, target_dumped):
 def injectFlag(target, target_dumped):
   target_dumped.update({
     'item_name': target.item.name,
-    'item_location': target.item.location,
+    'item_discord_channel': target.item.discord_channel,
     'annotator_name': target.annotator.name
   })
   return target_dumped

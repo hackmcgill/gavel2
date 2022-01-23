@@ -37,8 +37,8 @@
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       Array.from( document.querySelectorAll( '.autourl' ) ).forEach( a => {
-        a.classList.add( location.hostname === a.hostname || !a.hostname.length ? 'bg-gray' : 'external' );
-        if (location.hostname === a.hostname || !a.hostname.length) a.removeAttribute("href")
+        a.classList.add( discord_channel.hostname === a.hostname || !a.hostname.length ? 'bg-gray' : 'external' );
+        if (discord_channel.hostname === a.hostname || !a.hostname.length) a.removeAttribute("href")
       });
     })
 

@@ -202,7 +202,7 @@ def admin_flags():
     flag_dumped = flag_schema.dump(fl)
     flag_dumped.update({
       'item_name': fl.item.name,
-      'item_location': fl.item.location,
+      'item_discord_channel': fl.item.discord_channel,
       'annotator_name': fl.annotator.name
       })
     flags_dumped.append(flag_dumped)
@@ -586,8 +586,8 @@ def item_patch():
     item = Item.by_id(request.form['item_id'])
     if not item:
       return utils.user_error('Item %s not found ' % request.form['item_id'])
-    if 'location' in request.form:
-      item.location = request.form['location']
+    if 'discord_channel' in request.form:
+      item.discord_channel = request.form['discord_channel']
     if 'name' in request.form:
       item.name = request.form['name']
     if 'description' in request.form:
@@ -612,8 +612,8 @@ def admin_api_item_patch():
     item = Item.by_id(item_id)
     if not item:
       return utils.user_error('Item %s not found ' % item_id)
-    if 'location' in request.form:
-      item.location = request.form['location']
+    if 'discord_channel' in request.form:
+      item.discord_channel = request.form['discord_channel']
     if 'name' in request.form:
       item.name = request.form['name']
     if 'description' in request.form:
