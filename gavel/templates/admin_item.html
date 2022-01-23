@@ -36,12 +36,10 @@
           </form>
         </span>
       </p> -->
-      {% if not virtual %}
       <label class="block">
         <span class="text-bold text-12">Discord Channel</span>
         <input form="itemUpdateForm" name="discord_channel" type="text" class="form-input block w-full text-12" placeholder="Project Discord Channel" value="{{ item.discord_channel | safe }}">
       </label>
-      {% endif %}
       <div>
         <label class="block">
           <span class="text-bold text-12">Description</span>
