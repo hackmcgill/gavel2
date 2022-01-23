@@ -242,7 +242,7 @@ async function initTables() {
       headerName:"Details",
       children: [
         {headerName:"Project Name", width: standardNameWidth, minWidth: minDecimalWidth, field:"name", filter: true},
-        ...(!getIsVirtual() ? [{headerName:"Location", width: standardLocationWidth, minWidth: minDecimalWidth, field:"location", filter: true, columnGroupShow: "open"}] : []),
+        [{headerName:"Discord Channel", width: standardLocationWidth, minWidth: minDecimalWidth, field:"location", filter: true, columnGroupShow: "open"}],
         {headerName:"Description", field:"description", ...standardDescriptionOptions, columnGroupShow: "open"},
         ...(getIsVirtual() ? [
           {headerName:"Tagline", field:"tagline", ...standardDescriptionOptions, columnGroupShow: "open"},
@@ -264,7 +264,7 @@ async function initTables() {
     {headerName:"ID", field: "id", width: standardIdWidth, minWidth: minIdWidth, cellRenderer: FlagIdRenderer},
     {headerName:"Judge Name", field:"annotator_name", width: standardNameWidth},
     {headerName:"Project Name", field:"item_name", width: standardNameWidth},
-    {headerName:"Project Location", field:"item_location", width: standardLocationWidth},
+    {headerName:"Project Discord Channel", field:"item_location", width: standardLocationWidth},
     {headerName:"Reason", field:"reason", width: standardLocationWidth},
   ]  
 
