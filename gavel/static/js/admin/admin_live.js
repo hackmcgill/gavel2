@@ -242,7 +242,7 @@ async function initTables() {
       headerName:"Details",
       children: [
         {headerName:"Project Name", width: standardNameWidth, minWidth: minDecimalWidth, field:"name", filter: true},
-        [{headerName:"Discord Channel", width: standardLocationWidth, minWidth: minDecimalWidth, field:"location", filter: true, columnGroupShow: "open"}],
+        {headerName:"Discord Channel", width: standardLocationWidth, minWidth: minDecimalWidth, field:"location", filter: true, columnGroupShow: "open"},
         {headerName:"Description", field:"description", ...standardDescriptionOptions, columnGroupShow: "open"},
         ...(getIsVirtual() ? [
           {headerName:"Tagline", field:"tagline", ...standardDescriptionOptions, columnGroupShow: "open"},
